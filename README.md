@@ -14,4 +14,4 @@ To install do a poull. To use simply click on mouse and draw around screen to ge
 
 # Example Pic
     
-    ![image](https://user-images.githubusercontent.com/84104912/168596342-24464e5d-4516-4705-9a6a-5e2efd2f0285.png)
+![image](https://user-images.githubusercontent.com/84104912/168596342-24464e5d-4516-4705-9a6a-5e2efd2f0285.png)
