@@ -94,7 +94,6 @@ window.addEventListener("touchstart", function (e) {
   drawing = true;
   for (let i = 0; i < 30; i++) {
     const root = new Root(e.x, e.y);
-    root.update();
   }
 });
 
@@ -102,6 +101,7 @@ window.addEventListener("touchmove", function (e) {
   drawing = true;
   for (let i = 0; i < 3; i++) {
     const root = new Root(e.x, e.y);
+    root.update();
   }
 });
 
