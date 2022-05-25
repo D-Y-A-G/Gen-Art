@@ -106,15 +106,25 @@ window.addEventListener("mousedown", function (e) {
   }
 });
 
+window.addEventListener("mouseup", function () {
+  drawing = false;
+});
+
+////////////////////// Touch controls /////////////////////////
+
 window.addEventListener("touchstart", function (e) {
   drawing = true;
   for (let i = 0; i < 30; i++) {
     const root = new Root(e.x, e.y);
+       root.update();
   }
 });
 
-window.addEventListener("mouseup", function () {
-  drawing = false;
+window.addEventListener("touchmove", function () {
+  drawing = true;
+  for (let i =0; i < 30; i++){
+    const root = new Root(e.x, e.y);
+  }
 });
 
 window.addEventListener("touchend", function () {
