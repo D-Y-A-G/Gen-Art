@@ -89,6 +89,13 @@ class Flower {
     }
   }
 }
+window.addEventListener("touchstart", (e) => {
+  console.log(e);
+  drawing = true;
+  for (let i = 0; i < 30; i++) {
+    const root = new Root(e.x, e.y);
+  }
+});
 
 window.addEventListener("touchmove", (e) => {
   console.log(e);
@@ -97,14 +104,6 @@ window.addEventListener("touchmove", (e) => {
       const root = new Root(e.x, e.y);
       root.update();
     }
-  }
-});
-
-window.addEventListener("touchstart", (e) => {
-  console.log(e);
-  drawing = true;
-  for (let i = 0; i < 30; i++) {
-    const root = new Root(e.x, e.y);
   }
 });
 
