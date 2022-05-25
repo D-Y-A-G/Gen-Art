@@ -106,6 +106,17 @@ window.addEventListener("mousedown", function (e) {
   }
 });
 
+window.addEventListener("touchstart", function (e) {
+  drawing = true;
+  for (let i = 0; i < 30; i++) {
+    const root = new Root(e.x, e.y);
+  }
+});
+
 window.addEventListener("mouseup", function () {
+  drawing = false;
+});
+
+window.addEventListener("touchend", function () {
   drawing = false;
 });
