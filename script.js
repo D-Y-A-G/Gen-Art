@@ -90,7 +90,29 @@ class Flower {
   }
 }
 
+window.addEventListener("touchstart", function (e) {
+  drawing = true;
+  for (let i = 0; i < 30; i++) {
+    const root = new Root(e.x, e.y);
+    root.update();
+  }
+});
+
+window.addEventListener("touchmove", function (e) {
+  drawing = true;
+  for (let i = 0; i < 3; i++) {
+    const root = new Root(e.x, e.y);
+  }
+});
+
+window.addEventListener("touchend", function () {
+  drawing = false;
+});
+
+///////click ////////
+
 window.addEventListener("mousemove", function (e) {
+  // e.preventDefault();
   if (drawing) {
     for (let i = 0; i < 3; i++) {
       const root = new Root(e.x, e.y);
@@ -111,22 +133,3 @@ window.addEventListener("mouseup", function () {
 });
 
 ////////////////////// Touch controls /////////////////////////
-
-window.addEventListener("touchstart", function (e) {
-  drawing = true;
-  for (let i = 0; i < 30; i++) {
-    const root = new Root(e.x, e.y);
-       root.update();
-  }
-});
-
-window.addEventListener("touchmove", function () {
-  drawing = true;
-  for (let i =0; i < 30; i++){
-    const root = new Root(e.x, e.y);
-  }
-});
-
-window.addEventListener("touchend", function () {
-  drawing = false;
-});
