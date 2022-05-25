@@ -90,19 +90,19 @@ class Flower {
   }
 }
 
-window.addEventListener("touchstart", function (e) {
-  drawing = true;
-  for (let i = 0; i < 30; i++) {
-    const root = new Root(e.x, e.y);
-  }
-});
-
 window.addEventListener("touchmove", function (e) {
   if (drawing) {
     for (let i = 0; i < 3; i++) {
       const root = new Root(e.x, e.y);
       root.update();
     }
+  }
+});
+
+window.addEventListener("touchstart", function (e) {
+  drawing = true;
+  for (let i = 0; i < 30; i++) {
+    const root = new Root(e.x, e.y);
   }
 });
 
