@@ -98,10 +98,11 @@ window.addEventListener("touchstart", function (e) {
 });
 
 window.addEventListener("touchmove", function (e) {
-  drawing = true;
-  for (let i = 0; i < 3; i++) {
-    const root = new Root(e.x, e.y);
-    root.update();
+  if (drawing) {
+    for (let i = 0; i < 3; i++) {
+      const root = new Root(e.x, e.y);
+      root.update();
+    }
   }
 });
 
