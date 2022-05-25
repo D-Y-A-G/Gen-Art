@@ -90,7 +90,8 @@ class Flower {
   }
 }
 
-window.addEventListener("touchmove", function (e) {
+window.addEventListener("touchmove", (e) => {
+  console.log(e);
   if (drawing) {
     for (let i = 0; i < 3; i++) {
       const root = new Root(e.x, e.y);
@@ -99,7 +100,8 @@ window.addEventListener("touchmove", function (e) {
   }
 });
 
-window.addEventListener("touchstart", function (e) {
+window.addEventListener("touchstart", (e) => {
+  console.log(e);
   drawing = true;
   for (let i = 0; i < 30; i++) {
     const root = new Root(e.x, e.y);
@@ -112,25 +114,26 @@ window.addEventListener("touchend", function () {
 
 ///////click ////////
 
-window.addEventListener("mousemove", function (e) {
-  // e.preventDefault();
-  if (drawing) {
-    for (let i = 0; i < 3; i++) {
-      const root = new Root(e.x, e.y);
-      root.update();
-    }
-  }
-});
+// window.addEventListener("mousemove", function (e) {
+//   // e.preventDefault();
+//   if (drawing) {
+//     for (let i = 0; i < 3; i++) {
+//       const root = new Root(e.x, e.y);
+//       root.update();
+//     }
+//   }
+// });
 
-window.addEventListener("mousedown", function (e) {
-  drawing = true;
-  for (let i = 0; i < 30; i++) {
-    const root = new Root(e.x, e.y);
-  }
-});
+// window.addEventListener("mousedown", function (e) {
+//   // console.log(e);
+//   drawing = true;
+//   for (let i = 0; i < 30; i++) {
+//     const root = new Root(e.x, e.y);
+//   }
+// });
 
-window.addEventListener("mouseup", function () {
-  drawing = false;
-});
+// window.addEventListener("mouseup", function () {
+//   drawing = false;
+// });
 
 ////////////////////// Touch controls /////////////////////////
