@@ -89,10 +89,14 @@ class Flower {
     }
   }
 }
+
+////////////////////// Touch controls /////////////////////////
+
 window.addEventListener("touchstart", (e) => {
-  console.log(e);
+  // console.log(e);
   drawing = true;
   for (let i = 0; i < 30; i++) {
+    // 30 refers to the amount of roots that I want the for loop to generate when mouse is clicked
     const root = new Root(e.x, e.y);
   }
 });
@@ -111,28 +115,28 @@ window.addEventListener("touchend", function () {
   drawing = false;
 });
 
-///////click ////////
+//////////////////////// --click -- //////////////////////
 
-// window.addEventListener("mousemove", function (e) {
-//   // e.preventDefault();
-//   if (drawing) {
-//     for (let i = 0; i < 3; i++) {
-//       const root = new Root(e.x, e.y);
-//       root.update();
-//     }
-//   }
-// });
+window.addEventListener("mousemove", function (e) {
+  // e.preventDefault();
+  if (drawing) {
+    for (let i = 0; i < 3; i++) {
+      const root = new Root(e.x, e.y);
+      root.update();
+    }
+  }
+});
 
-// window.addEventListener("mousedown", function (e) {
-//   // console.log(e);
-//   drawing = true;
-//   for (let i = 0; i < 30; i++) {
-//     const root = new Root(e.x, e.y);
-//   }
-// });
+window.addEventListener("mousedown", function (e) {
+  // console.log(e);
+  drawing = true;
+  for (let i = 0; i < 30; i++) {
+    // 30 refers to the amount of roots that I want the for loop to generate when mouse is clicked
 
-// window.addEventListener("mouseup", function () {
-//   drawing = false;
-// });
+    const root = new Root(e.x, e.y);
+  }
+});
 
-////////////////////// Touch controls /////////////////////////
+window.addEventListener("mouseup", function () {
+  drawing = false;
+});
